@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+<style>
+  body{
+    background-image: url("https://media.istockphoto.com/id/1045681574/photo/top-view-of-a-wood-or-plywood-for-backdrop.jpg?s=612x612&w=0&k=20&c=LwpfG7C6VpndgJUkkYI0PiEBgMAgn7nVXl_Lg46-Sbs=");
+}
+</style>
+
+<div style="margin:20px 70px 70px 250px;">
+
+   <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Update" style="margin-left:100px; width:80px; height:40px" class="btn btn-warning">
+
+   </form>
+</div>
+{% endblock %}

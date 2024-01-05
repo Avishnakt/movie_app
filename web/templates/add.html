@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block body %}
+<div style="margin: 10px 350px 2px 350px;  border: 5px solid white; padding: 30px 30px 100px 180px ">
+<form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+            <h4 style="color:gray">Add movies </h4> <br>
+            <label>Name :</label>
+            <input type="text" name="name" , placeholder="Movie_Name"> <br> <br>
+
+            <label>Desc :</label>
+            <input type="textarea" name="desc" , placeholder="Description"> <br> <br>
+            <label>Image :</label>
+            <input type="file" name="img" , placeholder="Image "> <br><br>
+            <input type="submit" , value="Add" class="btn btn-primary">
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Movie_App</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url  'Oneapp:moves' %}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Home</a>
+          <a class="dropdown-item" href="#">Add</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#"></a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#"></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<style>
+    body {
+       background-image: url('data:image/jpeg;base64,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');
+       background-repeat: no-repeat;
+       background-size : 100% 100vh;
+}
+</style>
+<div class="m-5">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-12">
+        <h1 style="color:white"> Movie Store</h1>
+         {% block body %}
+         {% endblock %}
+      </div>
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div style="margin:50px 70px 5px 100px; width:75%" >
+   <img src="{{movie.img.url }}" width="450px" height="220px"> <br>
+    <h4 style="color:black; margin-left : 80px;" >{{ movie.name }}</h4> <br>
+    <h6 style="color:white;"> {{ movie.desc}} </h6><br>
+   <br>
+   <br><br>
+    <div >
+        <a class="btn btn-warning" style="margin:5px 20px 60px 60px; float:left;" href="{% url 'Oneapp:update' movie.id %}"> Update </a>
+        <a  class="btn btn-danger" style="margin:5px 20px 20px 30px;" href="{% url 'Oneapp:delete' movie.id %}">Delete</a>
+    </div>
+
+</div>
+
+{% endblock %}
+

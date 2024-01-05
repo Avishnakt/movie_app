@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block body %}
+{% for i in movie_list %}
+<div style="margin-top : 60px;">
+<div style="float:left; padding-bottom : 60px;">
+      <img src="{{i.img.url}}" width="200px" height="100px" style="margin-left:50px">
+      <br>
+      <a href="{% url 'Oneapp:detail' i.id %}" style="margin-left:70px; padding-bottom:40px;">{{ i.name }}</a>  <br>
+</div>
+{% endfor %}
+    <div>
+      <a style="margin-left:50px" class="btn btn-warning" href="{% url 'Oneapp:add_movie' %}">Add</a>
+    </div>
+</div>
+{% endblock %}

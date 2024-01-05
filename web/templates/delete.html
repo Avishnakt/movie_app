@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block body %}
+<div style="margin: 40px 100px 100px 100px">
+<form method="POST">
+      {% csrf_token %}
+      <h3 style="color:gray;">Are you want to delete the movie ?</h3> <br>
+      <input type="submit" value="submit" width="100px" height="60px" style="margin-left: 100px">
+
+
+</form>
+</div>
+{% endblock %}
